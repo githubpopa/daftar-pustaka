@@ -159,7 +159,7 @@ references = [
         "year": 2006,
         "title": "Statistical Comparisons of Classifiers over Multiple Data Sets",
         "source": "vol. 7",
-        "url": ""
+        "url": "https://drive.google.com/file/d/1ZVvr5oqPcvMkVeFWmkIVF0nGboSHR2pt/view?usp=drive_link"
     },
     {
         "author": "Diebold, F.X. & Mariano, R.S.",
@@ -523,7 +523,7 @@ references = [
         "year": 1992,
         "title": "Stacked generalization",
         "source": "Neural Networks, 5(2), 241–259",
-        "url": "https://github.com/githubpopa/daftarPustaka/blob/main/assets/pdf/wolpert1992.pdf"
+        "url": "https://drive.google.com/file/d/1_8-1RvuvoMEbM0JEYLZqt0bSEVN8lx58/view"
     },
     {
         "author": "Yatri, A. & Permana, D.",
