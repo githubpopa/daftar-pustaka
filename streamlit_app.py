@@ -523,7 +523,7 @@ references = [
         "year": 1992,
         "title": "Stacked generalization",
         "source": "Neural Networks, 5(2), 241–259",
-        "url": "https://drive.google.com/file/d/1_8-1RvuvoMEbM0JEYLZqt0bSEVN8lx58/view"
+        "url": "https://drive.google.com/file/d/1_8-1RvuvoMEbM0JEYLZqt0bSEVN8lx58/view?usp=drive_link"
     },
     {
         "author": "Yatri, A. & Permana, D.",
