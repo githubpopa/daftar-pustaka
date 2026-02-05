@@ -46,21 +46,21 @@ references = [
         "year": 2022,
         "title": "The Impact of Forecast Errors on Fiscal Planning and Debt Accumulation",
         "source": "Jahrbucher fur Nationalokonomie und Statistik, 242(2), 171–190",
-        "url": ""
+        "url": "https://drive.google.com/file/d/1kqiGmRKzbN8i9qZyasPWvTmQd2zS3KYs/preview"
     },
     {
         "author": "Aggarwal, C.C.",
         "year": 2015,
         "title": "Data Mining: The Textbook",
         "source": "Springer",
-        "url": ""
+        "url": "https://drive.google.com/file/d/1BjCKItsz_v_BiK0KQPEA0MchjmC-xd3I/preview"
     },
     {
         "author": "Ajder, A., Hamza, H.A.A. & Ayaz, R.",
         "year": 2024,
         "title": "Wavelet-Enhanced Hybrid LSTM-XGBoost Model for Predicting Time Series Containing Unpredictable Events",
         "source": "",
-        "url": ""
+        "url": "https://drive.google.com/file/d/1OhIWS8OJ6dkdvTw2lEWlbt7Un570k-Xz/preview"
     },
     {
         "author": "Alm, J. & Torgler, B.",
@@ -608,7 +608,7 @@ filtered = [
 # =========================
 # PAGINATION
 # =========================
-PAGE_SIZE = 12
+PAGE_SIZE = 15
 
 if "page" not in st.session_state:
     st.session_state.page = 1
@@ -668,7 +668,7 @@ with col_right:
         st.link_button("⬇️ Unduh Dokumen", selected["url"], use_container_width=True)
 
         #st.markdown("**Preview:**")
-        st.components.v1.iframe(selected["url"], height=0)
+        st.components.v1.iframe(selected["url"], height=400)
     else:
         st.info("Klik salah satu referensi di kiri untuk melihat preview.")
 
