@@ -560,33 +560,72 @@ references = [
 # =========================
 # SEARCH & FILTER
 # =========================
-years = sorted({r["year"] for r in references})
+#years = sorted({r["year"] for r in references})
 
-c1, c2 = st.columns([2, 1])
+#c1, c2 = st.columns([3, 2])
 
-with c1:
-    keyword = st.text_input(
+#with c1:
+#    keyword = st.text_input(
+#        "Cari (Author / Judul)",
+#        placeholder="misal: LSTM, pajak, XGBoost"
+#    )
+
+#with c2:
+#    year_filter = st.multiselect(
+#        "Tahun",
+#        years,
+#        default=years
+#    )
+
+keyword = st.text_input(
         "Cari (Author / Judul)",
         placeholder="misal: LSTM, pajak, XGBoost"
     )
 
-with c2:
-    year_filter = st.multiselect(
-        "Tahun",
-        years,
-        default=years
-    )
 
 # gabungkan semua kolom jadi satu text (WAJIB sebelum filter)
 for r in references:
     r["text"] = f"{r['author']} {r['title']} {r['source']} {r['year']}"
 
 # FILTER FINAL (TIDAK ERROR)
+#filtered = [
+#    r for r in references
+#    if r["year"] in year_filter
+#    and (keyword.lower() in r["text"].lower() or keyword == "")
+#]
+
 filtered = [
     r for r in references
-    if r["year"] in year_filter
-    and (keyword.lower() in r["text"].lower() or keyword == "")
+    if (keyword.lower() in r["text"].lower() or keyword == "")
 ]
+
+# =========================
+# PAGINATION
+# =========================
+PAGE_SIZE = 12
+
+if "page" not in st.session_state:
+    st.session_state.page = 1
+
+
+filter_key = (keyword, tuple())
+
+
+if "last_filter" not in st.session_state:
+    st.session_state.last_filter = filter_key
+
+if filter_key != st.session_state.last_filter:
+    st.session_state.page = 1
+    st.session_state.last_filter = filter_key
+
+
+total_items = len(filtered)
+total_pages = max(1, (total_items + PAGE_SIZE - 1) // PAGE_SIZE)
+
+start = (st.session_state.page - 1) * PAGE_SIZE
+end = start + PAGE_SIZE
+page_items = filtered[start:end]
+
 
 
 st.divider()
@@ -600,16 +639,17 @@ with col_left:
     st.subheader("📄 Referensi")
     selected = None
 
-    labels = [f"[{i+1}] {r['text']}" for i, r in enumerate(filtered)]
+    labels = [f"[{start+i+1}] {r['text']}" for i, r in enumerate(page_items)]
+
 
     choice = st.radio(
         "📄 Referensi",
-        options=range(len(filtered)),
+        options=range(len(page_items)),
         format_func=lambda x: labels[x],
         label_visibility="collapsed"
     )
 
-    selected = filtered[choice] if filtered else None
+    selected = page_items[choice] if page_items else None
 
   
 with col_right:
@@ -621,7 +661,29 @@ with col_right:
 
         st.link_button("⬇️ Unduh Dokumen", selected["url"], use_container_width=True)
 
-        st.markdown("**Preview:**")
-        st.components.v1.iframe(selected["url"], height=480)
+        #st.markdown("**Preview:**")
+        st.components.v1.iframe(selected["url"], height=0)
     else:
         st.info("Klik salah satu referensi di kiri untuk melihat preview.")
+
+
+st.caption(f"Menampilkan {len(page_items)} dari {total_items} referensi • Halaman {st.session_state.page}/{total_pages}")
+
+nav1, nav2 = st.columns([3,2])
+
+with nav1:
+
+    nav1a, nav1b = st.columns([1,1])
+    with nav1a:
+        if st.button("⬅ Prev", use_container_width=True, disabled=st.session_state.page <= 1):
+            st.session_state.page -= 1
+            st.rerun()
+    with nav1b:
+        if st.button("Next ➡", use_container_width=True, disabled=st.session_state.page >= total_pages):
+            st.session_state.page += 1
+            st.rerun()
+
+
+
+
+
