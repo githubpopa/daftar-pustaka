@@ -6,6 +6,13 @@ st.set_page_config(
     layout="wide"
 )
 
+hide_streamlit_style = """
+    <style>
+    button[kind="header"] { display: none !important; }
+   /* header [data-testid="stToolbar"] { display: none !important;  }*/
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # =========================
 # STYLE: RAPAT & RATA KIRI
 # =========================
@@ -13,8 +20,7 @@ st.markdown("""
 <style>
 .ref-item {
     text-align: left;
-    line-height: 1.35;
-    margin-bottom: 6px;
+    line-height: 1;
     font-size: 0.95rem;
 }
 .ref-item:hover {
@@ -28,7 +34,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.caption("Daftar referensi penelitian beserta tautan unduh dan pratinjau dokumen.")
+st.caption("Daftar referensi penelitian, tautan unduh dokumen & preview .")
 
 
 # =========================
@@ -628,7 +634,7 @@ page_items = filtered[start:end]
 
 
 
-st.divider()
+
 
 # =========================
 # DUA KOLOM
