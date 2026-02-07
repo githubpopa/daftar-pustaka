@@ -74,7 +74,7 @@ references = [
         "year": 2024,
         "title": "Data Produk Domestik Bruto",
         "source": "Badan Pusat Statistik",
-        "url": "https://www.bps.go.id/id/statistics-table/2/MTk1NSMy/-seri-2010--1--pdb-triwulanan-atas-dasar-harga-berlaku-menurut-pengeluaran--milyar-rupiah-.html"
+        "url": "https://docs.google.com/spreadsheets/d/1BpL0a9WDxkvnosxTCNrTEm2up5dL8GMm"
     },
     {
         "author": "Badan Pusat Statistik",
