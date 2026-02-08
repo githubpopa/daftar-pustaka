@@ -80,15 +80,15 @@ references = [
         "author": "Badan Pusat Statistik",
         "year": 2024,
         "title": "Indek Harga Perdagangan Besar",
-        "source": "Badan Pusat Statistik",
-        "url": "https://www.bps.go.id/id/statistics-table/2/MjQjMg==/indeks-harga-perdagangan-besar-indonesia.html"
+        "source": "Badan Pusat Statistik", 
+        "url": "https://docs.google.com/spreadsheets/d/11SeGZL7d5gwDLVN9R-pB7zga9VEr3Alh"
     },
     {
         "author": "Bank Indonesia",
         "year": 2024,
         "title": "Data Inflasi Indonesia",
         "source": "Bank Indonesia",
-        "url": "https://www.bi.go.id/id/statistik/indikator/data-inflasi.aspx"
+        "url": "https://docs.google.com/spreadsheets/d/11oR_ZQUidox5RqllksKOGsNr_iP-031Z"
     },
     {
         "author": "Beaumont, C., Makridakis, S., Wheelwright, S.C. & McGee, V.E.",
