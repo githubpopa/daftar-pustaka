@@ -95,14 +95,14 @@ references = [
         "year": 1984,
         "title": "Forecasting: Methods and Applications",
         "source": "The Journal of the Operational Research Society, 35(1), 79",
-        "url": ""
+        "url": "https://drive.google.com/file/d/1bbTfR6ZcWTHwQ1oYRaEGFRhr8SiBTBXe/preview"
     },
     {
         "author": "Bergmeir, C., Hyndman, R. & Koo, B.",
         "year": 2018,
         "title": "A note on the validity of cross-validation for evaluating autoregressive time series prediction",
         "source": "Computational Statistics & Data Analysis, 120(C), 70–83",
-        "url": ""
+        "url": "https://docs.google.com/document/d/1Rd4NwitSk85R5XuiUI57sHsGkeiGzJjC"
     },
     {
         "author": "Botchkarev, A.",
