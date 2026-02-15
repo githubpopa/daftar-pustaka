@@ -109,7 +109,7 @@ references = [
         "year": 2018,
         "title": "Performance Metrics (Error Measures) in Machine Learning Regression, Forecasting and Prognostics: Properties and Typology",
         "source": "",
-        "url": ""
+        "url": "https://drive.google.com/file/d/1_5PqQA0h8yWNZ9M2wOmRQ1MDfK8p2t69/preview"
     },
     {
         "author": "Box, G.E.P., Jenkins, G.M., Reinsel, G.C. & Ljung, G.M.",
