@@ -116,7 +116,7 @@ references = [
         "year": 2015,
         "title": "Time Series Analysis: Forecasting and Control",
         "source": "Wiley",
-        "url": ""
+        "url": "https://drive.google.com/file/d/1fnEqtWXe-zMEg8mpY7ElkWe5h0-bxHLJ/preview"
     },
     {
         "author": "Cahyono, N.D., Sumpeno, S. & Setiiadi, E.",
