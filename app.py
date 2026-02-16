@@ -123,7 +123,7 @@ references = [
         "year": 2023,
         "title": "Multivariate Time Series for Customs Revenue Forecasting Using LSTM Neural Networks",
         "source": "2023 International Conference on Information Technology and Computing (ICITCOM), 357–362",
-        "url": ""
+        "url": "https://drive.google.com/file/d/1_KAms_cFvp8MsBzbFtxMtCFxsIp5ArJm/preview"
     },
     {
         "author": "Chai, T. & Draxler, R.R.",
